@@ -27,7 +27,7 @@ print:
     li a7, 4
     ecall
     
-    lw a0, (t1) #INSERIMENTO
+    lw a0, (t1) 
     li a7, 1
     ecall	
     
