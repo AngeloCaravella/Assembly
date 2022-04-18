@@ -3,7 +3,7 @@
 input: .asciz "Inserisci il numero di elementi dell'array: "
 input_n: .asciz "Inserisci l'elemento che vuoi eliminare: "
 input_el: .asciz "Inserisci numero: "
-output: .asciz "L'array Ë: "
+output: .asciz "L'array √®: "
 ####### code segment  #########
 .text
 .globl main
@@ -14,7 +14,7 @@ main:
 	
 	li a7, 5
 	ecall 
-	mv a2, a0  ##in a2 ho la cardinalit‡
+	mv a2, a0  ##in a2 ho la cardinalit√†
 	
 	la a0, input_n
 	li a7, 4
