@@ -1,5 +1,5 @@
 .data
-numero: .asciz "Quanti numeri di Fibonacci vuoi calcolare ? (esclusi i primi due):\n"
+numero: .asciz "Quanti numeri di Fibonacci vuoi calcolare ? (escluse le condizioni iniziali):\n"
 spazio: .asciz " "
 .text
 
@@ -27,7 +27,6 @@ mv a0, t2
 li a7 ,1
 ecall
 
-
 la a0, spazio
 li a7, 4
 ecall
@@ -39,8 +38,7 @@ mv a0, t2
 li a7 ,1
 ecall
 
-########
-
+###########################
 scorri:
 addi t1, t1, -4
 lw t2, (t1)
@@ -67,6 +65,7 @@ ecall
 addi t0, t0, -1
 bnez t0, scorri
 
+addi sp, sp, 100
 #EXIT
 li a7,10
 ecall
