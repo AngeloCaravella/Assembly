@@ -6,22 +6,16 @@ input: .asciz "\nInserisci il numero "
 spazio: .asciz "\n"
 .text
 
-
-
-
 .globl fattoriale
 
 fattoriale:
-
 
 	la a0, input
 	li a7, 4
 	ecall 
 	
 	li a7, 5
-	ecall 
-	
-	
+	ecall 	
 	mv t0, a0 
 	li t2,1
 	bnez  t0,  calc
@@ -44,8 +38,5 @@ fattoriale:
 	li a7 ,1
 	ecall 
 	
-
 	li a7, 10
 	ecall 
-
-
